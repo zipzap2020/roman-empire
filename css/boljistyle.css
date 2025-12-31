@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+.rim-clasic{
+     background: #DEB887;
+    box-shadow: 0 0 50px rgba(139, 69, 19, 0.3) inset;
+}
+body{
+    font-family: 'lato', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .navbar-brand{
+    font-family: 'cinzel', serif;
+}
+.hero-section{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    min-height: 500px;
+    background: url('../slike/pad\ rimskog\ carstva.jpeg') center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hero-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.hero-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.hero-overlay h1{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 768px){
+    .hero-section{
+        height: 50vh;
+    }
+    .hero-overlay h1{
+        font-size: 2.5rem;
+    }
+}
+
+.carstvo-link{
+    display: block;
+    height: 200px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+}
+.carstvo-link:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.carstvo-content{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.hover-text{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+.carstvo-link:hover .hover-text{
+    opacity: 1;
+    transform: translateY(0);
+}
+.zapadno-carstvo{
+    background: rgb(136, 104, 59);
+    transition: all 0.5s linear;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.zapadno-carstvo:hover {
+    background: linear-gradient(135deg, #ae0000, #430131);
+    border-radius: 15px;
+ 
+}
+.ujedinjeno-carstvo{
+    background: #88683b;
+    transition: all 0.5s linear;
+    border-radius: 0;
+}
+.ujedinjeno-carstvo:hover{
+    background: linear-gradient(135deg, #4d0007, #9a000e);
+    border-radius: 15px;
+}
+.istocno-carstvo{
+    background: #88683b;
+    transition: all 0.5s linear;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius:15px ;
+}
+.istocno-carstvo:hover{
+    background: linear-gradient(135deg, #2A2F4D, #2541a6);
+    border-radius: 15px;
+}
+.opis-sajta{
+    position: relative;
+    padding: 80px 0;
+    background: url('../slike/slika\ za\ pozadinu\ teksta.png');
+}
+.opis-sajta .container{
+    background: rgba(225, 225, 225, 0.8);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    min-height: 900px;
+    max-width: 800px;
+}
+.opis-sajta h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.opis-sajta p{
+    text-align: justify;
+}
+.carstva-navbar{
+    background: transparent;
+    padding: 20px 0;
+    z-index: 2;
+    margin-top: auto;
+}
+.hero-search{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    z-index: 3;
+}
+.hero-search input{
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.hero-search button{
+    padding: 8px 12px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #555;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-search button .search-icon{
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+.home-icon{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    display: inline-block;
+}
+.home-icon img{
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+.home-icon img:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+.pletenica-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13px;
+    background: url("../slike/freepik__adjust__2984.png") repeat-x top center;
+    background-size: auto 100%;
+    z-index: 2;
+}
+.zapadno-hero{
+    background: url('../slike/rimske\ legije.png') center/cover no-repeat fixed;
+    height: 100vh;
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.opis-zapadno .container{
+    background: rgba(96, 7, 7, 0.8);
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    max-width: 900px;
+    text-align: center;
+    min-height: 700px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 20px;
+    margin: 0 auto;
+    color: #f5f5f5;
+}
+.opis-zapadno{
+    position: relative;
+    padding: 80px 0;
+    background: url('../slike/StockCake-Ancient_Roman_Glory_1760873644.jpg') center/cover no-repeat;
+}
+.zapadno-sekcije{
+    background: linear-gradient(to top, #66000A, #430131);
+    padding: 80px 0;
+}
+.zapadno-sekcije .container{
+    max-width: 1200px;
+}
+.zapadno-sekcije h2{
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+.zapadna-kartica{
+    display: block;
+    background: rgba(225, 225, 225, 0.8);
+    border-radius: 15px;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
+    height: 350px;
+}
+.kartica-img{
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+}
+.kartica-content{
+    padding: 20px;
+    text-align: center;
+}
+.zapadna-kartica:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+.rim-footer{
+    position: relative;
+    background: url("../slike/pad\ zapada.jpg") center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5f5f5;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+.footer-overlay{
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+}
+.latin-quote{
+    font-size: 1.8rem;
+    font-weight: 70;
+    margin-bottom: 10px;
+}
+.translation{
+    font-size: 1rem;
+    font-style: italic;
+    color: #ddd;
+}
+.pletenica-bot{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 13px;
+    background: url("../slike/freepik__adjust__2984.png") repeat-x top center;
+    background-size: auto 100%;
+    z-index: 2;
+}
+.istocno-hero{
+    background: url('../slike/hero\ istok.jpg') center/cover no-repeat fixed;
+    height: 100vh;
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.opis-istocno{
+     position: relative;
+    padding: 80px 0;
+    background: url('../slike/istok\ pozadina.jpg') center/cover no-repeat;
+}
+.opis-istocno .container{
+    background: rgba(48, 56, 103, 0.8);
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    max-width: 900px;
+    text-align: center;
+    min-height: 700px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 20px;
+    margin: 0 auto;
+    color: #f5f5f5;
+}
+.istocno-sekcije{
+    background: linear-gradient(to top, #2A2F4D, #2541a6);
+    padding: 80px 0;
+}
+.istocno-sekcije .container{
+    max-width: 1200px;
+}
+.istocno-sekcije h2{
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+.ist-rim-footer{
+    position: relative;
+    background: url("../slike/pad\ istok.jpg") center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5f5f5;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+.ujedinjeno-hero{
+    background: url('../slike/ipak\ ova\ slika.jpg') center/cover no-repeat fixed;
+    height: 100vh;
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.opis-ujedinjeno{
+    position: relative;
+    padding: 80px 0;
+    background: url('../slike/ujedinjeni\ rim\ opis.jpeg') center/cover no-repeat;
+}
+.opis-ujedinjeno .container{
+    background: rgba(154, 145, 43, 0.8);
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    max-width: 900px;
+    text-align: center;
+    min-height: 700px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 20px;
+    margin: 0 auto;
+    color: #f5f5f5;
+}
+.ujedinjeno-sekcije{
+    background: linear-gradient(to top, #9b7201, #abad30);
+    padding: 80px 0;
+}
+.ujedinjeno-sekcije .container{
+    max-width: 1200px;
+}
+.ujedinjeno-sekcije h2{
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+.ujedinjeno-footer{
+position: relative;
+    background: url("../slike/ujedinjeni\ rim\ hero.jpeg") center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5f5f5;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+.arhitektura-zap{
+    background:linear-gradient(to right top, #C2182F,#515151);
+    position: relative;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.opis-arhz{
+    position: relative;
+    padding: 80px 0;
+    background: url('../slike/old-parchment-paper-6795136.jpeg') center top repeat;
+    background-size: 100% auto;
+}
+.opis-arhz .container{
+    background: rgba(205, 205, 205, 0.8);
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    max-width: 900px;
+    text-align: center;
+    min-height: 700px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 20px;
+    margin: 0 auto;
+    color: black;
+}
+.hero-section2{
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    width: 770px;
+    height: 100px !important;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: black;
+    transition: all 0.2 ease;
+    background-color: rgba(139, 69, 19, 0.8) !important;
+    margin-bottom: 15px;
+}
+.card:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.card img{
+    width: 100;
+    height: 90px;
+    object-fit: contain;
+    margin-top: 5px;
+    margin-left: 10px;
+    display: flex;
+    border-radius: 10px;
+}
+.card-text{
+    flex: 1;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.card-text h1{
+    font-size: 25px;
+    color: white;
+}
+.card-text p{
+    color: white;
+}
+.accordion-button {
+  background: linear-gradient(#ffd700, #faf0be, #ffd700) !important;
+  margin-bottom: 5px !important;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.accordion-body {
+  background-color: #863e7b !important; 
+}
+.accordion-item {
+  background-color: transparent !important;
+  border: none !important;
+}
+.arhitektura-ist{
+    background:linear-gradient(to right top, #3457D5,#2A2F4D);
+    position: relative;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.arhitektura-ujed{
+    background:linear-gradient(to right top, #ebee24,#606371);
+    position: relative;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.opis-arhz img{
+    width: 250px;
+    display: block;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.okvir {
+    position: relative;
+    display: inline-block;
+    
+}
+.wrapper{
+    text-align: center;
+}
+
+
+.plet-top {
+    position: absolute;
+    top: -13px;        /* visina pletenice */
+    width: calc(100% + 13px);
+    left: -13px;
+    width: 110%;
+    height: 13px;
+    background: url("../slike/freepik__adjust__2984.png") repeat-x top;
+    background-size: auto 100%;
+}
+
+/* DOLE */
+.plet-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    height: 13px;
+    background: url("../slike/freepik__adjust__2984.png") repeat-x bottom;
+    background-size: auto 100%;
+}
+
+/* ─────────────────────────────── */
+/*           VERTIKALNE PLETENICE */
+/* ─────────────────────────────── */
+
+/* LEVO */
+.plet-left {
+    position: absolute;
+    top: 0;
+    left: -13px;
+    width: 13px;
+    height: 90%;
+    background: url("../slike/freepik__adjust__2984\ \(Edited\).png") repeat-y left;
+    background-size: 100% auto;
+}
+
+/* DESNO */
+.plet-right {
+    position: absolute;
+    top: 0;
+    right: -13px;
+    width: 13px;
+    height: 90%;
+    background: url("../slike/freepik__adjust__2984\ \(Edited\).png") repeat-y right;
+    background-size: 100% auto;
+}
