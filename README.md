@@ -1,2 +1,5 @@
 # roman-empire
-This project is shared on GitHub in order to make my work accessible to anyone interested in the Roman Empire. I welcome feedback and contributions from people who have knowledge of Roman history, especially suggestions that could help improve the accuracy and quality of the information presented here.
+This project was created to share my work with anyone interested in the history of the Roman Empire.
+The main goal of publishing this website on GitHub is to make the content publicly available and accessible to everyone.
+
+I also welcome contributions, suggestions, and corrections from people who have knowledge of the Roman Empire, especially regarding historical accuracy and additional information that could improve the project.
