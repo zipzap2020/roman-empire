@@ -439,8 +439,8 @@ position: relative;
     display: flex;
     flex-direction: row;
     align-items: left;
-    width: 100%; /* Changed from 770px */
-    max-width: 770px; /* Keep max width for larger screens */
+    width: 100%; 
+    max-width: 770px; 
     height: 100px !important;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -531,7 +531,7 @@ position: relative;
 
 .plet-top {
     position: absolute;
-    top: -13px;        /* visina pletenice */
+    top: -13px;        
     width: calc(100% + 13px);
     left: -13px;
     width: 110%;
@@ -540,7 +540,7 @@ position: relative;
     background-size: auto 100%;
 }
 
-/* DOLE */
+
 .plet-bottom {
     position: absolute;
     bottom: 30px;
@@ -551,11 +551,7 @@ position: relative;
     background-size: auto 100%;
 }
 
-/* ─────────────────────────────── */
-/*           VERTIKALNE PLETENICE */
-/* ─────────────────────────────── */
 
-/* LEVO */
 .plet-left {
     position: absolute;
     top: 0;
@@ -566,7 +562,7 @@ position: relative;
     background-size: 100% auto;
 }
 
-/* DESNO */
+
 .plet-right {
     position: absolute;
     top: 0;
@@ -576,9 +572,9 @@ position: relative;
     background: url("../slike/freepik__adjust__2984\ \(Edited\).png") repeat-y right;
     background-size: 100% auto;
 }
-/* Mobile adjustments - keep horizontal AND look good */
+
 @media (max-width: 768px) {
-    /* Force columns to stay in a row */
+
     .carstva-navbar .row {
         flex-wrap: nowrap !important;
     }
@@ -589,13 +585,13 @@ position: relative;
         padding: 0 3px;
     }
     
-    /* Better height for mobile */
+  
     .carstvo-link {
         height: 130px;
         border-radius: 10px !important;
     }
     
-    /* Keep the gradient backgrounds on hover */
+
     .zapadno-carstvo {
         border-radius: 10px !important;
     }
@@ -608,7 +604,7 @@ position: relative;
         border-radius: 10px !important;
     }
     
-    /* Better text sizing */
+
     .carstvo-content {
         padding: 10px 5px;
     }
@@ -631,12 +627,12 @@ position: relative;
         padding: 0 5px;
     }
     
-    /* Reduce navbar padding */
+
     .carstva-navbar {
         padding: 10px 0;
     }
     
-    /* Keep the hover effects working */
+  
     .carstvo-link:hover {
         transform: translateY(-3px);
     }
@@ -647,13 +643,13 @@ position: relative;
     }
     
     .card .col-md-4 {
-        flex: 0 0 100px; /* Fixed width container */
+        flex: 0 0 100px; 
         max-width: 100px;
         padding: 0;
     }
     
     .card .col-md-8 {
-        flex: 1; /* Takes remaining space */
+        flex: 1; 
         max-width: calc(100% - 100px);
         padding: 0;
     }
@@ -689,7 +685,7 @@ position: relative;
         padding: 20px 10px;
     }
 }
-/* Search dropdown styles */
+
 .search-dropdown {
     position: absolute;
     top: 100%;
@@ -778,44 +774,44 @@ position: relative;
         font-size: 13px;
     }
 }
-/* Kontejner */
+
 .carousel-wrapper {
     position: relative;
     padding: 40px 0;
     overflow: hidden;
 }
 
-/* Track mora imati padding-left/right da bi prva i zadnja kartica mogle doći u centar */
+
 .carousel-track {
     display: flex !important;
     flex-wrap: nowrap !important;
     overflow-x: auto;
     scroll-behavior: smooth;
     gap: 20px;
-    padding: 20px 35%; /* Ovo omogućava da jedna kartica uvek bude u sredini */
+    padding: 20px 35%; 
     scrollbar-width: none;
     align-items: center;
 }
 
-/* Osnovni stil za sve kartice (ZAMAGLJENO) */
+
 .card-item {
-    flex: 0 0 450px !important; /* Širina istaknute kartice */
+    flex: 0 0 450px !important;
     max-width: 80vw;
     transition: all 0.5s ease;
-    opacity: 0.4;            /* Prozirnost za sporedne kartice */
-    filter: blur(4px);      /* Zamagljenost */
-    transform: scale(0.8);   /* Smanjenje */
+    opacity: 0.4;           
+    filter: blur(4px);      
+    transform: scale(0.8);   
 }
 
-/* Stil za ISTAKNUTU karticu */
+
 .card-item.active {
     opacity: 1;
     filter: blur(0);
-    transform: scale(1.1);   /* Malo veća od ostalih */
+    transform: scale(1.1);   
     z-index: 2;
 }
 
-/* Strelice moraju biti iznad svega */
+
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -833,29 +829,29 @@ position: relative;
 
 .btn-left { left: 5px; }
 .btn-right { right: 5px; }
-/* --- PRILAGOĐAVANJE ZA TELEFONE --- */
+
 @media (max-width: 768px) {
     .carousel-track {
-        padding: 20px 10% !important; /* Manji padding sa strana na telefonu */
+        padding: 20px 10% !important;
         gap: 15px;
     }
 
     .card-item {
-        flex: 0 0 85vw !important; /* Kartica zauzima 85% širine ekrana */
+        flex: 0 0 85vw !important;
         min-height: 400px;
-        transform: scale(0.95); /* Blago smanjenje sporednih kartica */
+        transform: scale(0.95);
         opacity: 0.6;
         filter: blur(2px);
     }
 
     .card-item.active {
-        transform: scale(1) !important; /* Aktivna kartica je u punoj veličini */
+        transform: scale(1) !important;
         opacity: 1;
         filter: blur(0);
     }
 
     .kartica-img {
-        height: 150px; /* Smanjujemo sliku na mobilnom da ostane mesta za tekst */
+        height: 150px; 
     }
 
     .kartica-content h3 {
@@ -867,7 +863,7 @@ position: relative;
         line-height: 1.3;
     }
 
-    /* Smanjujemo strelice na mobilnom da ne smetaju */
+  
     .carousel-btn {
         width: 40px;
         height: 40px;

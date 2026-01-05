@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!track || !btnLeft || !btnRight) return;
 
-    // Funkcija koja određuje koja je kartica u centru
+  
     const updateActiveCard = () => {
         let centerPoint = track.getBoundingClientRect().left + track.offsetWidth / 2;
         
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const cardRect = card.getBoundingClientRect();
             const cardCenter = cardRect.left + cardRect.width / 2;
             
-            // Ako je centar kartice blizu centra kontejnera (tolerancija 100px)
+ 
             if (Math.abs(centerPoint - cardCenter) < 150) {
                 card.classList.add('active');
             } else {
@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     };
 
-    // Prati skrol za promenu fokusa
+
     track.addEventListener('scroll', updateActiveCard);
 
-    // Pomeranje na klik
+
     const scrollStep = () => cards[0].offsetWidth + 20;
 
     btnRight.addEventListener('click', () => {
@@ -46,6 +46,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Inicijalno pokreni da prva kartica dobije fokus
     updateActiveCard();
 });
