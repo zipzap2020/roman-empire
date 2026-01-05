@@ -141,20 +141,23 @@ h1, h2, h3, h4, h5, h6, .navbar-brand{
     z-index: 2;
     margin-top: auto;
 }
-.hero-search{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    z-index: 3;
+.hero-search {
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+    left: auto !important;
+    display: flex !important;
+    z-index: 1000 !important;
+    width: auto !important;
 }
-.hero-search input{
+.hero-search input {
     padding: 8px 12px;
     border: none;
     border-radius: 5px 0 0 5px;
     outline: none;
+    width: 180px;
 }
-.hero-search button{
+.hero-search button {
     padding: 8px 12px;
     border: none;
     border-radius: 0 5px 5px 0;
@@ -164,10 +167,9 @@ h1, h2, h3, h4, h5, h6, .navbar-brand{
     align-items: center;
     justify-content: center;
 }
-.hero-search button .search-icon{
-    width: 24px;
-    height: 24px;
-    display: block;
+.hero-search button .search-icon {
+    width: 20px;
+    height: 20px;
 }
 .home-icon{
     position: absolute;
@@ -433,17 +435,18 @@ position: relative;
     flex-direction: column;
     justify-content: space-between;
 }
-.card{
+.card {
     display: flex;
     flex-direction: row;
     align-items: left;
-    width: 770px;
+    width: 100%; /* Changed from 770px */
+    max-width: 770px; /* Keep max width for larger screens */
     height: 100px !important;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     color: black;
-    transition: all 0.2 ease;
+    transition: all 0.2s ease;
     background-color: rgba(139, 69, 19, 0.8) !important;
     margin-bottom: 15px;
 }
@@ -572,4 +575,206 @@ position: relative;
     height: 90%;
     background: url("../slike/freepik__adjust__2984\ \(Edited\).png") repeat-y right;
     background-size: 100% auto;
+}
+/* Mobile adjustments - keep horizontal AND look good */
+@media (max-width: 768px) {
+    /* Force columns to stay in a row */
+    .carstva-navbar .row {
+        flex-wrap: nowrap !important;
+    }
+    
+    .carstva-navbar .col-md-4 {
+        flex: 1;
+        max-width: 33.333%;
+        padding: 0 3px;
+    }
+    
+    /* Better height for mobile */
+    .carstvo-link {
+        height: 130px;
+        border-radius: 10px !important;
+    }
+    
+    /* Keep the gradient backgrounds on hover */
+    .zapadno-carstvo {
+        border-radius: 10px !important;
+    }
+    
+    .ujedinjeno-carstvo {
+        border-radius: 10px !important;
+    }
+    
+    .istocno-carstvo {
+        border-radius: 10px !important;
+    }
+    
+    /* Better text sizing */
+    .carstvo-content {
+        padding: 10px 5px;
+    }
+    
+    .carstvo-content h3 {
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+    
+    .carstvo-content p {
+        font-size: 0.65rem;
+        margin-bottom: 5px;
+        line-height: 1.1;
+    }
+    
+    .hover-text {
+        font-size: 0.6rem;
+        line-height: 1.1;
+        padding: 0 5px;
+    }
+    
+    /* Reduce navbar padding */
+    .carstva-navbar {
+        padding: 10px 0;
+    }
+    
+    /* Keep the hover effects working */
+    .carstvo-link:hover {
+        transform: translateY(-3px);
+    }
+}
+@media (max-width: 768px) {
+    .card {
+        flex-direction: row !important;
+    }
+    
+    .card .col-md-4 {
+        flex: 0 0 100px; /* Fixed width container */
+        max-width: 100px;
+        padding: 0;
+    }
+    
+    .card .col-md-8 {
+        flex: 1; /* Takes remaining space */
+        max-width: calc(100% - 100px);
+        padding: 0;
+    }
+    
+    .card .row {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .card img {
+        width: 90px !important;
+        height: 90px !important;
+        object-fit: cover !important;
+        margin: 5px !important;
+        border-radius: 10px;
+    }
+    
+    .card-text {
+        padding: 10px 8px;
+    }
+    
+    .card-text h1 {
+        font-size: 0.85rem;
+        margin-bottom: 3px;
+    }
+    
+    .card-text p {
+        font-size: 0.7rem;
+        margin-bottom: 0;
+    }
+    
+    .opis-arhz .container {
+        padding: 20px 10px;
+    }
+}
+/* Search dropdown styles */
+.search-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 350px;
+    margin-top: 5px;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    max-height: 400px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+}
+
+.search-dropdown.active {
+    display: block;
+}
+
+.search-result-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: #333;
+}
+
+.search-result-item:hover {
+    background: #f5f5f5;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.result-name {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #000;
+}
+
+.result-info {
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.result-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.badge-eastern {
+    background: #3457D5;
+    color: white;
+}
+
+.badge-western {
+    background: #ae0000;
+    color: white;
+}
+
+.badge-ancient {
+    background: #9b7201;
+    color: white;
+}
+
+.no-results {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+}
+
+
+
+@media (max-width: 768px) {
+    .search-dropdown {
+        max-height: 300px;
+        font-size: 13px;
+    }
 }
