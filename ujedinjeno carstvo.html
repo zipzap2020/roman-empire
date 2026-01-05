@@ -42,44 +42,55 @@
     <section class="ujedinjeno-sekcije">
         <div class="container">
             <h2>explore the empire</h2>
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <a href="ujedinjeno-arhitektura.html" class="zapadna-kartica">
-                        <div class="kartica-content">
-                            <img src="slike/Pantheon_Rom_1_cropped.jpg" alt="pantheon" class="kartica-img">
-                            <h3>Architecture</h3>
-                            <p>Monumental and daring, Roman architecture rose to defy time, shaping temples and arenas that whispered the empire’s glory.</p>
-                        </div>
-                    </a>
+            <div class="carousel-wrapper">
+    <button class="carousel-btn btn-left" id="prevBtn">&#10094;</button>
+    
+    <div class="row g-4 carousel-track" id="cardTrack">
+        
+        <div class="col-md-3 col-10 card-item">
+            <a href="ujedinjeno-arhitektura.html" class="zapadna-kartica">
+                <div class="kartica-content">
+                    <img src="slike/Pantheon_Rom_1_cropped.jpg" alt="Roman Pantheon" class="kartica-img">
+                    <h3>Architecture</h3>
+                    <p>Witness the birth of Roman engineering, from the first temples to the mastery of the dome and the eternal Pantheon.</p>
                 </div>
-                <div class="col-md-3">
-                    <a href="ujedinjeno-religija.html" class="zapadna-kartica">
-                        <div class="kartica-content">
-                            <img src="slike/0_Statue_de_Mars_(Pyrrhus)_-_Musei_Capitolini_-_MC0058_(2).jpeg" alt="god mars" class="kartica-img">
-                            <h3>Religion</h3>
-                            <p>Roman religion was a living force, where gods and emperors intertwined, and rituals commanded fear and awe</p>
-                              </div>
-                    </a>
+            </a>
+        </div>
+
+        <div class="col-md-3 col-10 card-item">
+            <a href="ujedinjeno-religija.html" class="zapadna-kartica">
+                <div class="kartica-content">
+                    <img src="slike/0_Statue_de_Mars_(Pyrrhus)_-_Musei_Capitolini_-_MC0058_(2).jpeg" alt="Ancient Roman Altar" class="kartica-img">
+                    <h3>Religion</h3>
+                    <p>Explore the sacred traditions of the early Romans and the gods that protected the city on its path to glory.</p>
                 </div>
-                               <div class="col-md-3">
-                    <a href="ujedinjeno-vojska.html" class="zapadna-kartica">
-                        <div class="kartica-content">
-                            <img src="slike/Column_of_Marcus_Aurelius_-_detail3.jpg" alt="early roman millitary" class="kartica-img">
-                            <h3>Military</h3>
-                            <p>The Roman army was relentless and disciplined, a storm of steel and strategy, conquering lands and forging the empire’s unyielding power.</p>
-                        </div>
-                    </a>
+            </a>
+        </div>
+
+        <div class="col-md-3 col-10 card-item">
+            <a href="ujedinjeno-vojska.html" class="zapadna-kartica">
+                <div class="kartica-content">
+                    <img src="slike/Column_of_Marcus_Aurelius_-_detail3.jpg" alt="early roman military" class="kartica-img">
+                    <h3>Military</h3>
+                    <p>The Roman army was relentless and disciplined, a storm of steel and strategy that forged the empire’s unyielding power.</p>
                 </div>
-                               <div class="col-md-3">
-                    <a href="ujedinjeno-vladari.html" class="zapadna-kartica">
-                        <div class="kartica-content">
-                            <img src="slike/Mignard_-_The_Shepherd_Faustulus_Bringing_Romulus_and_Remus_to_His_Wife.jpg" alt="early roman rulers" class="kartica-img">
-                            <h3>Rulers</h3>
-                            <p>The emperors of Rome were both gods and mortals, wielding absolute power, shaping destiny, and casting shadows of glory and fear across the empire.</p>
-                        </div>
-                    </a>
+            </a>
+        </div>
+
+        <div class="col-md-3 col-10 card-item">
+            <a href="ujedinjeno-vladari.html" class="zapadna-kartica">
+                <div class="kartica-content">
+                    <img src="slike/Mignard_-_The_Shepherd_Faustulus_Bringing_Romulus_and_Remus_to_His_Wife.jpg" alt="early roman rulers" class="kartica-img">
+                    <h3>Rulers</h3>
+                    <p>The emperors of Rome were both gods and mortals, wielding absolute power and shaping the destiny of the world.</p>
                 </div>
-            </div>
+            </a>
+        </div>
+
+    </div>
+
+    <button class="carousel-btn btn-right" id="nextBtn">&#10095;</button>
+</div>
         </div>
     </section>
     <footer class="ujedinjeno-footer">
@@ -91,5 +102,6 @@
 
         </div>
     </footer>
+    <script src="./js/main.js"></script>
 </body>
 </html>

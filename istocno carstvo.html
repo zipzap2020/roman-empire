@@ -40,44 +40,55 @@
     <section class="istocno-sekcije">
         <div class="container">
             <h2>explore the empire</h2>
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <a href="istok-arhitektura.html" class="zapadna-kartica">
-                        <div class="kartica-content">
-                            <img src="slike/Hagia_Sophia_1852.jpg" alt="hagia sophia" class="kartica-img">
-                            <h3>Architecture</h3>
-                            <p>Explore the grand monuments, majestic palaces, and awe-inspiring churches that defined the Eastern Roman Empire.</p>
-                        </div>
-                    </a>
+           <div class="carousel-wrapper">
+    <button class="carousel-btn btn-left" id="prevBtn">&#10094;</button>
+    
+    <div class="row g-4 carousel-track" id="cardTrack">
+        
+        <div class="col-md-3 col-10 card-item">
+            <a href="istok-arhitektura.html" class="zapadna-kartica">
+                <div class="kartica-content">
+                    <img src="slike/Hagia_Sophia_1852.jpg" alt="hagia sophia" class="kartica-img">
+                    <h3>Architecture</h3>
+                    <p>Explore the grand monuments, majestic palaces, and awe-inspiring churches that defined the Eastern Roman Empire.</p>
                 </div>
-                <div class="col-md-3">
-                    <a href="istok-religija.html" class="zapadna-kartica">
-                        <div class="kartica-content">
-                            <img src="slike/istocno carstvo religija.jpg" alt="Christ Pantocrator mosaic from Hagia Sophia" class="kartica-img">
-                            <h3>Religion</h3>
-                            <p>Discover how Christianity and the Eastern Orthodox Church shaped daily life, art, and power in Byzantium.</p>
-                              </div>
-                    </a>
+            </a>
+        </div>
+
+        <div class="col-md-3 col-10 card-item">
+            <a href="istok-religija.html" class="zapadna-kartica">
+                <div class="kartica-content">
+                    <img src="slike/istocno carstvo religija.jpg" alt="Christ Pantocrator mosaic from Hagia Sophia" class="kartica-img">
+                    <h3>Religion</h3>
+                    <p>Discover how Christianity and the Eastern Orthodox Church shaped daily life, art, and power in Byzantium.</p>
                 </div>
-                               <div class="col-md-3">
-                    <a href="istok-vojska.html" class="zapadna-kartica">
-                        <div class="kartica-content">
-                            <img src="slike/belisarius.jpeg" alt="roman general Belisarius" class="kartica-img">
-                            <h3>Military</h3>
-                            <p>Explore the disciplined legions and elite Byzantine forces that defended and expanded the Eastern Roman Empire.</p>
-                        </div>
-                    </a>
+            </a>
+        </div>
+
+        <div class="col-md-3 col-10 card-item">
+            <a href="istok-vojska.html" class="zapadna-kartica">
+                <div class="kartica-content">
+                    <img src="slike/belisarius.jpeg" alt="roman general Belisarius" class="kartica-img">
+                    <h3>Military</h3>
+                    <p>Explore the disciplined legions and elite Byzantine forces that defended and expanded the Eastern Roman Empire.</p>
                 </div>
-                               <div class="col-md-3">
-                    <a href="istok-vladar.html" class="zapadna-kartica">
-                        <div class="kartica-content">
-                            <img src="slike/justinian I.jpg" alt="Justinian I" class="kartica-img">
-                            <h3>Rulers</h3>
-                            <p>Discover the visionary emperors and key leaders whose decisions shaped the fate of the Eastern Roman Empire.</p>
-                        </div>
-                    </a>
+            </a>
+        </div>
+
+        <div class="col-md-3 col-10 card-item">
+            <a href="istok-vladar.html" class="zapadna-kartica">
+                <div class="kartica-content">
+                    <img src="slike/justinian I.jpg" alt="Justinian I" class="kartica-img">
+                    <h3>Rulers</h3>
+                    <p>Discover the visionary emperors and key leaders whose decisions shaped the fate of the Eastern Roman Empire.</p>
                 </div>
-            </div>
+            </a>
+        </div>
+
+    </div>
+
+    <button class="carousel-btn btn-right" id="nextBtn">&#10095;</button>
+</div>
         </div>
     </section>
     <footer class="ist-rim-footer">
@@ -89,5 +100,6 @@
 
         </div>
     </footer>
+    <script src="./js/main.js"></script>
 </body>
 </html>
