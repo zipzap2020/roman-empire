@@ -17,12 +17,15 @@
             <img src="slike/house-solid-full.svg" alt="home">
         </a>
         <!--search bar-->
-        <form action="#" method="get" class="hero-search">
-            <input type="text" placeholder="search...">
-            <button type="submit">
-                <img src="slike/magnifying-glass-solid-full.svg" alt="search button" class="search-icon">
-            </button>
-        </form>
+       <!--search bar-->
+<div class="hero-search">
+    <input type="text" id="searchInput" placeholder="Search rulers, generals, pages...">
+    <button type="button" id="searchButton">
+        <img src="slike/magnifying-glass-solid-full.svg" alt="search button" class="search-icon">
+    </button>
+    <!-- Search Results Dropdown -->
+    <div id="searchResults" class="search-dropdown"></div>
+</div>
     <!--glavni navbar za 3 carstva-->
     <nav class="carstva-navbar">
         <div class="container-fluid">
@@ -93,5 +96,9 @@
     </p>
         </div>
     </section>
+    </section>
+    <script src="./js/nekimojjavafajl.js"></script>
+</body>
+</html>
 </body>
 </html>
