@@ -41,7 +41,24 @@ h1, h2, h3, h4, h5, h6, .navbar-brand{
     padding: 20px;
 }
 .hero-overlay h1{
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    animation: slideDown 1.2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+}
+.hero-overlay .lead {
+    animation: slideDown 1.2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.8s;
+}
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 @media (max-width: 768px){
     .hero-section{
@@ -102,7 +119,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand{
     border-radius: 0;
 }
 .ujedinjeno-carstvo:hover{
-    background: linear-gradient(135deg, #4d0007, #9a000e);
+    background: linear-gradient(135deg, #280018, #66023c);
     border-radius: 15px;
 }
 .istocno-carstvo{
@@ -365,7 +382,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand{
     background: url('../slike/ujedinjeni\ rim\ opis.jpeg') center/cover no-repeat;
 }
 .opis-ujedinjeno .container{
-    background: rgba(154, 145, 43, 0.8);
+    background: rgba(81, 1, 48, 0.8);
     padding: 40px;
     margin-bottom: 40px;
     border-radius: 15px;
@@ -377,7 +394,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand{
     color: #f5f5f5;
 }
 .ujedinjeno-sekcije{
-    background: linear-gradient(to top, #9b7201, #abad30);
+    background: linear-gradient(to top, #280018, #66023c);
     padding: 80px 0;
 }
 .ujedinjeno-sekcije .container{
@@ -503,7 +520,7 @@ position: relative;
     align-items: center;
 }
 .arhitektura-ujed{
-    background:linear-gradient(to right top, #ebee24,#606371);
+    background:linear-gradient(to right top, #66023c,#606371);
     position: relative;
 
     overflow: hidden;
